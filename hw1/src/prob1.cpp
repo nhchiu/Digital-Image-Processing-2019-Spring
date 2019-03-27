@@ -29,14 +29,14 @@ unsigned char MirroredSample(Img image, int i, int j) {
   } else if (i < SIZE) {
     m = i;
   } else {
-    m = 2 * SIZE - i;
+    m = 2 * SIZE - i - 2;
   }
   if (j < 0) {
     n = -j;
   } else if (j < SIZE) {
     n = j;
   } else {
-    n = 2 * SIZE - j;
+    n = 2 * SIZE - j - 2;
   }
   return image[m][n];
 }
